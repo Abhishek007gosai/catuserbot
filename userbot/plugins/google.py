@@ -43,15 +43,7 @@ async def ParseSauce(googleurl):
     return results
 
 
-@catub.cat_cmd(
-    pattern="p$",
-    command=("p", plugin_category),
-    info={
-        "header": "Google reverse search command.",
-        "description": "reverse search replied image or sticker in google and shows results.",
-        "usage": "{tr}p",
-    },
-)
+
 async def scam(results, lim):
     single = opener.open(results["similar_images"]).read()
     decoded = single.decode("utf-8")
@@ -66,8 +58,6 @@ async def scam(results, lim):
         else:
             break
     return imglinks
-
-
 @catub.cat_cmd(
     pattern="gs ([\s\S]*)",
     command=("gs", plugin_category),
@@ -152,12 +142,12 @@ async def gsearch(q_event):
 
 
 @catub.cat_cmd(
-    pattern="grs$",
-    command=("grs", plugin_category),
+    pattern="p$",
+    command=("p", plugin_category),
     info={
         "header": "Google reverse search command.",
         "description": "reverse search replied image or sticker in google and shows results.",
-        "usage": "{tr}grs",
+        "usage": "{tr}p",
     },
 )
 async def _(event):
