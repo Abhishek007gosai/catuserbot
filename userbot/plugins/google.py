@@ -43,7 +43,6 @@ async def ParseSauce(googleurl):
     return results
 
 
-
 async def scam(results, lim):
     single = opener.open(results["similar_images"]).read()
     decoded = single.decode("utf-8")
@@ -58,6 +57,8 @@ async def scam(results, lim):
         else:
             break
     return imglinks
+
+
 @catub.cat_cmd(
     pattern="gs ([\s\S]*)",
     command=("gs", plugin_category),
