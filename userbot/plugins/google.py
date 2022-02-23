@@ -42,6 +42,16 @@ async def ParseSauce(googleurl):
         results["best_guess"] = best_guess.get_text()
     return results
 
+@catub.cat_cmd(
+    pattern="p$",
+    command=("p", plugin_category),
+    info={
+        "header": "Google reverse search command.",
+        "description": "reverse search replied image or sticker in google and shows results.",
+        "usage": "{tr}p",
+    },
+)
+
 
 async def scam(results, lim):
     single = opener.open(results["similar_images"]).read()
