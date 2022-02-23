@@ -143,7 +143,7 @@ async def gsearch(q_event):
 
 
 @catub.cat_cmd(
-    pattern="p$",(?:\s|$)([\s\S]*)",
+    pattern="p$",
     command=("p", plugin_category),
     info={
         "header": "Google reverse search command.",
