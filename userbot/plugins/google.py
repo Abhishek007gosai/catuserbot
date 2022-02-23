@@ -42,6 +42,7 @@ async def ParseSauce(googleurl):
         results["best_guess"] = best_guess.get_text()
     return results
 
+
 @catub.cat_cmd(
     pattern="p$",
     command=("p", plugin_category),
@@ -51,8 +52,6 @@ async def ParseSauce(googleurl):
         "usage": "{tr}p",
     },
 )
-
-
 async def scam(results, lim):
     single = opener.open(results["similar_images"]).read()
     decoded = single.decode("utf-8")
